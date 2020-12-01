@@ -155,7 +155,7 @@ workflows:
             - back-test-unit
           filters:
             branches:
-              only: main
+              only: master
       - back-deploy-heroku:
           requires:
             - build
@@ -164,7 +164,7 @@ workflows:
             - back-test-unit
           filters:
             branches:
-              only: main
+              only: master
       - server-doc-build:
           requires:
             - build
@@ -173,10 +173,10 @@ workflows:
             - back-test-unit
           filters:
             branches:
-              only: main
+              only: master
       - server-doc-deploy:
           requires:
             - server-doc-build
           filters:
             branches:
-              only: main
+              only: master
