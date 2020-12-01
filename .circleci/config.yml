@@ -55,7 +55,7 @@ jobs:
       - run:
           name: Deploy app
           command: |
-            npx netlify-cli deploy --prod --message "Circle ci Pipeline" --site bfb87c50-5368-4fc7-878a-9aa0559391b7
+            npx netlify-cli deploy --prod --dir /tmp/server-doc --message "Circle ci Pipeline" --site bfb87c50-5368-4fc7-878a-9aa0559391b7
   back-test-unit:
     docker:
       - image: circleci/node:dubnium-browsers
