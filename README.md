@@ -26,4 +26,4 @@ $ npm run test
 $ npm run test:e2e
 ```
 
-Il y a un dockerfile pour builder en docker, pour lancer la stack avec docker, un docker-compose est présent.
+Il y a un dockerfile pour builder en docker, pour lancer la stack avec docker, un docker-compose est présent..
