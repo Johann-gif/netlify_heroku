@@ -122,8 +122,9 @@ jobs:
       - run:
           name: Heroku Deploy
           command: |
-            heroku/install
-            heroku/deploy-via-git
+            HEROKU_API_KEY=f33f34b0-9953-4d98-a6f1-18d7ed33cde5
+            HEROKU_APP_NAME=murmuring-eyrie-98234
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:master
       - run:
           name: Smoke Test
           command: |
