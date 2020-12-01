@@ -54,7 +54,9 @@ jobs:
           at: /tmp
       - run:
           name: Deploy app
-          command: echo todo && false
+          command: |
+            npm install netlify-cli -g
+            netlify deploy --prod --dir build-dir --message "Circle ci Pipeline" --site bfb87c50-5368-4fc7-878a-9aa0559391b7
   back-test-unit:
     docker:
       - image: circleci/node:dubnium-browsers
